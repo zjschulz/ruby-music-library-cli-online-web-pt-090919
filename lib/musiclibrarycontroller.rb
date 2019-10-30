@@ -18,6 +18,7 @@ class MusicLibraryController
       puts "To quit, type 'exit'."
       puts "What would you like to do?"
     input = gets.strip
+<<<<<<< HEAD
       case input
         when 'list songs'
           list_songs
@@ -32,6 +33,8 @@ class MusicLibraryController
         when 'play song'
           play_song
       end
+=======
+>>>>>>> b911ee00635530446047b1db66d8220729724dca
     end
   end
   
@@ -64,12 +67,16 @@ class MusicLibraryController
   end
   
   def play_song
+<<<<<<< HEAD
     puts "Which song number would you like to play?"
     input = gets.strip
     if (1..Song.all.length).include?(input.to_i)
       song =Song.all.sort{|a,b| a.name <=> b.name}[input.to_i - 1]
       puts "Playing #{song.name} by #{song.artist.name}"
     end
+=======
+    
+>>>>>>> b911ee00635530446047b1db66d8220729724dca
   end
   
 end
